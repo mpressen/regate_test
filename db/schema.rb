@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2022_01_23_171027) do
     t.integer "external_id"
   end
 
+  create_table "pokemon_types_pokemons", id: false, force: :cascade do |t|
+    t.bigint "pokemon_id"
+    t.bigint "pokemon_type_id"
+    t.index ["pokemon_id"], name: "index_pokemon_types_pokemons_on_pokemon_id"
+    t.index ["pokemon_type_id"], name: "index_pokemon_types_pokemons_on_pokemon_type_id"
+  end
+
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
     t.integer "height"
@@ -32,13 +39,6 @@ ActiveRecord::Schema.define(version: 2022_01_23_171027) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "external_id"
-  end
-
-  create_table "pokemons_types", id: false, force: :cascade do |t|
-    t.bigint "pokemon_id"
-    t.bigint "pokemon_type_id"
-    t.index ["pokemon_id"], name: "index_pokemons_types_on_pokemon_id"
-    t.index ["pokemon_type_id"], name: "index_pokemons_types_on_pokemon_type_id"
   end
 
 end
