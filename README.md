@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Ruby on Rails CI](https://github.com/mpressen/regate_test/actions/workflows/rubyonrails.yml/badge.svg)](https://github.com/mpressen/regate_test/actions/workflows/rubyonrails.yml)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See it in action : https://regate--test-mpressen.herokuapp.com/
